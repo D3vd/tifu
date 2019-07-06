@@ -1,0 +1,11 @@
+.container {
+  margin: 20px;
+  background-color: white;
+  border-radius: 40px;
+  padding: 30px;
+  text-align: justify;
+}
+
+h1 {
+  margin-bottom: 0 !important;
+}
