@@ -18,6 +18,10 @@
   display: none;
 }
 
+.postContainer {
+  margin-top: 90px;
+}
+
 @media only screen and (max-width: 768px) {
   .headerContainer {
     padding: 20px;

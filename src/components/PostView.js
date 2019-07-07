@@ -28,7 +28,7 @@ export class PostView extends Component {
           <Row>
             <Col span={2}>
               <img
-                onClick={this.props.changeView}
+                onClick={() => this.props.changeView('')}
                 className={styles.backBtn}
                 src={require('./images/back.png')}
                 alt=""
@@ -72,8 +72,9 @@ export class PostView extends Component {
             </div>
           </Row>
         </header>
-
-        <Post fontSize={this.state.fontSize} />
+        <div className={styles.postContainer}>
+          <Post fontSize={this.state.fontSize} id={this.props.id} />
+        </div>
       </div>
     );
   }

@@ -8,7 +8,8 @@ import PostView from './PostView';
 export class Main extends Component {
   state = {
     cardView: true,
-    posts: []
+    posts: [],
+    post_id: ''
   };
 
   componentDidMount() {
@@ -30,9 +31,7 @@ export class Main extends Component {
           let post_obj = {
             id: post.id,
             title: post.title,
-            selftext: post.selftext,
-            selftext_html: post.selftext_html,
-            size: post.link_flair_text,
+            size,
             nsfw: post.over_18
           };
 
@@ -46,9 +45,11 @@ export class Main extends Component {
     });
   }
 
-  changeView = () => {
+  changeView = id => {
+    console.log(id);
     this.setState({
-      cardView: !this.state.cardView
+      cardView: !this.state.cardView,
+      post_id: id
     });
   };
 
@@ -62,7 +63,7 @@ export class Main extends Component {
           </div>
         ) : (
           <div>
-            <PostView changeView={this.changeView} />
+            <PostView changeView={this.changeView} id={this.state.post_id} />
           </div>
         )}
       </div>
