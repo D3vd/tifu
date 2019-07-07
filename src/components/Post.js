@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import snoowrap from 'snoowrap';
 
+import styles from './css/post.module.css';
+
 export class Post extends Component {
   state = {
     title: '',
@@ -28,10 +30,13 @@ export class Post extends Component {
 
   render() {
     return (
-      <div>
-        <h1>{this.state.title}</h1>
+      <div className={styles.container}>
+        <h1 className={styles.title}>{this.state.title}</h1>
         <div style={{ fontSize: this.props.fontSize + 'px' }}>
-          <div dangerouslySetInnerHTML={{ __html: this.state.content }} />
+          <div
+            className={styles.content}
+            dangerouslySetInnerHTML={{ __html: this.state.content }}
+          />
         </div>
       </div>
     );

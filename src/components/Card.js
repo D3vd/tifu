@@ -9,7 +9,7 @@ export class Card extends Component {
       <div>
         <Col xs={24} md={8}>
           <div className={styles.container}>
-            <h1>{this.props.title}</h1>
+            <h1 className={styles.title}>{this.props.title}</h1>
           </div>
         </Col>
       </div>

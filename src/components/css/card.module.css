@@ -4,8 +4,10 @@
   border-radius: 40px;
   padding: 30px;
   text-align: justify;
+  font-family: 'Nunito', sans-serif;
 }
 
-h1 {
+.title {
   margin-bottom: 0 !important;
+  font-weight: 700;
 }
