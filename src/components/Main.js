@@ -2,10 +2,17 @@ import React, { Component } from 'react';
 
 import Header from './Header';
 import CardView from './CardView';
+import PostView from './PostView';
 
 export class Main extends Component {
   state = {
-    cardView: true
+    cardView: false
+  };
+
+  changeView = () => {
+    this.setState({
+      cardView: !this.state.cardView
+    });
   };
 
   render() {
@@ -14,11 +21,11 @@ export class Main extends Component {
         {this.state.cardView ? (
           <div>
             <Header />
-            <CardView />
+            <CardView changeView={this.changeView} />
           </div>
         ) : (
           <div>
-            <h1>Post View</h1>
+            <PostView changeView={this.changeView} />
           </div>
         )}
       </div>

@@ -1,0 +1,13 @@
+.backBtn {
+  width: 50px;
+  margin-left: 100px;
+}
+
+.headerContainer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #3f3f3f;
+}

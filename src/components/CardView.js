@@ -6,7 +6,9 @@ export class CardView extends Component {
   render() {
     return (
       <div>
-        <Card title="TIFU By Becoming an Accidental Active School Shooter" />
+        <div onClick={this.props.changeView}>
+          <Card title="TIFU By Becoming an Accidental Active School Shooter" />
+        </div>
       </div>
     );
   }
