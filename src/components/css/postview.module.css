@@ -1,13 +1,33 @@
 .backBtn {
   width: 50px;
-  margin-left: 100px;
 }
 
 .headerContainer {
-  padding-top: 20px;
-  padding-bottom: 20px;
   position: fixed;
   top: 0;
   width: 100%;
   background-color: #3f3f3f;
+  padding: 20px 100px;
+}
+
+.fontSizeBtn {
+  width: 50px;
+}
+
+.mobileFont {
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .headerContainer {
+    padding: 20px;
+  }
+
+  .mobileFont {
+    display: block;
+  }
+
+  .desktopFont {
+    display: none;
+  }
 }
