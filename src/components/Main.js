@@ -16,11 +16,11 @@ export class Main extends Component {
 
   componentDidMount() {
     const r = new snoowrap({
-      client_id: process.env.CLIENT_ID,
-      client_secret: process.env.CLIENT_SECRET,
-      username: process.env.USERNAME,
-      password: process.env.PASSWORD,
-      user_agent: process.env.USER_AGENT
+      client_id: 'GBg3Z_at_euz0w',
+      client_secret: 'EFDb4i7eflDTVfBskbwctNGc5qw',
+      user_agent: 'Tifuscript',
+      username: 'praw879345',
+      password: 'NcotiANgYRogarunDrO'
     });
 
     r.getHot('tifu').then(posts => {
