@@ -9,7 +9,7 @@ export class CardView extends Component {
         {this.props.posts.map(post => {
           return (
             <div onClick={() => this.props.changeView(post.id)} key={post.id}>
-              <Card title={post.title} />
+              <Card title={post.title} size={post.size} nsfw={post.nsfw} />
             </div>
           );
         })}

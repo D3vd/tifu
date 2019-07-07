@@ -1,5 +1,11 @@
 .backBtn {
   width: 50px;
+  transition: transform 0.2s;
+}
+
+.backBtn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .headerContainer {
@@ -12,6 +18,12 @@
 
 .fontSizeBtn {
   width: 50px;
+  transition: transform 0.2s;
+}
+
+.fontSizeBtn:hover {
+  transform: scale(1.2);
+  cursor: pointer;
 }
 
 .mobileFont {
