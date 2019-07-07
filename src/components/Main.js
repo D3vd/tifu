@@ -4,12 +4,14 @@ import snoowrap from 'snoowrap';
 import Header from './Header';
 import CardView from './CardView';
 import PostView from './PostView';
+import Loader from './Loader';
 
 export class Main extends Component {
   state = {
     cardView: true,
     posts: [],
-    post_id: ''
+    post_id: '',
+    loading: true
   };
 
   componentDidMount() {
@@ -40,7 +42,8 @@ export class Main extends Component {
       });
 
       this.setState({
-        posts: clean_posts
+        posts: clean_posts,
+        loading: false
       });
     });
   }
@@ -59,7 +62,11 @@ export class Main extends Component {
         {this.state.cardView ? (
           <div>
             <Header />
-            <CardView posts={this.state.posts} changeView={this.changeView} />
+            {this.state.loading ? (
+              <Loader />
+            ) : (
+              <CardView posts={this.state.posts} changeView={this.changeView} />
+            )}
           </div>
         ) : (
           <div>

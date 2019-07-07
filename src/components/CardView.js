@@ -5,7 +5,7 @@ import Card from './Card';
 export class CardView extends Component {
   render() {
     return (
-      <div style={{ marginTop: '30px' }}>
+      <div style={{ marginTop: '10px' }}>
         {this.props.posts.map(post => {
           return (
             <div onClick={() => this.props.changeView(post.id)} key={post.id}>
