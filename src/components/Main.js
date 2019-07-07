@@ -7,14 +7,11 @@ import PostView from './PostView';
 
 export class Main extends Component {
   state = {
-    cardView: false,
+    cardView: true,
     posts: []
   };
 
   componentDidMount() {
-    console.log(process.env.username);
-    console.log(process.env.NODE_ENV);
-
     const r = new snoowrap({
       client_id: process.env.CLIENT_ID,
       client_secret: process.env.CLIENT_SECRET,
@@ -39,8 +36,6 @@ export class Main extends Component {
             nsfw: post.over_18
           };
 
-          console.log(clean_posts);
-
           clean_posts.push(post_obj);
         }
       });
@@ -63,7 +58,7 @@ export class Main extends Component {
         {this.state.cardView ? (
           <div>
             <Header />
-            <CardView changeView={this.changeView} />
+            <CardView posts={this.state.posts} changeView={this.changeView} />
           </div>
         ) : (
           <div>
